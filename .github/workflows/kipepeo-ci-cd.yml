@@ -39,7 +39,7 @@ jobs:
           name: maven-build-artifact
           path: target
       - name: Login to ECR with credentials
-        uses: aws-actions/aws-configure-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{secrets.ACCESS_KEY_ID}}
           aws-secret-access-key: ${{secrets.ACCESS_SECRET_KEY}}
