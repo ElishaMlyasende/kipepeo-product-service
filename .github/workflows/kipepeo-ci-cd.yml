@@ -18,7 +18,9 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
       - name: running maven command in order to create jar file
-        run: ./mvnw clean package -DskipTests
+        run: |
+          chmod +x mvnw
+          ./mvnw clean package -DskipTests
       - name: uploaddinng artifact to github
         uses: actions/upload-artifact@v4
         with:
