@@ -52,7 +52,7 @@ jobs:
       - name: build,tag and push image to amazon ECR
         env:
           ECR_REGISTRY: ${{steps.ecr-login.outputs.registry}}
-          ECR_REPOSITORY: KIPEPEO-REPO
+          ECR_REPOSITORY: kipepeotechlabs
           IMAGE_TAG: latest
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
