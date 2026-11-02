@@ -32,7 +32,7 @@ jobs:
     needs: build
     steps:
       - name: downloading the code from github
-        uses : actions/checkout@v4
+        uses: actions/checkout@v4
       - name: downloading the artifact
         uses: actions/download-artifact@v4
         with:
